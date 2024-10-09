@@ -259,10 +259,24 @@ function moveCar(e) {
 
 function fireBullet() {
   bullets.push({ x: carX + carWidth / 2 - bulletWidth / 2, y: carY });
+  playAudiob();
+}
+
+var audiob = document.getElementById("bulletsound");
+function playAudiob() {
+    audiob.play();
+    audiob.currentTime = 0;
 }
 
 function throwFlame() {
   flames.push({ x: carX + carWidth / 2 - flameWidth / 2, y: carY });
+  playAudiof();
+}
+
+var audiof = document.getElementById("flamesound");
+function playAudiof() {
+    audiof.play();
+    audiof.currentTime = 0;
 }
 
 function moveBall() {

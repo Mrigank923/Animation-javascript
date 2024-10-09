@@ -5,16 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>angry Car </title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="image/blast.png">
+
 </head>
 <body>
 
   <div id="startScreen">
-    <h1>Car Ball Game</h1>
+    <h1>ANGRY Car</h1>
     <p>Use arrow keys to move the car and push ball.</p>
-    <p>Use "b" for bullet and "f" for flames.</p>
+    <p>Use "b" for bullet and "f" for flames to destroy ball.</p>
     <p>to check the score press"q".</p>
     <button id="startBtn">Start Game</button>
 </div>
+
+<audio id="bulletsound" controls>
+    <source src="audio/bullet.mp3" type="audio/mpeg">
+</audio>
+<audio id="flamesound" controls>
+    <source src="audio/fire.wav" type="audio/mpeg">
+</audio>
+
 
 <div id="gameOverScreen" style="display: none;">
     <h1>Game Over</h1>
