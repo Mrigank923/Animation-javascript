@@ -7,6 +7,7 @@ const startBtn = document.getElementById('startBtn');
 const replayBtn = document.getElementById('replayBtn');
 const finalScore = document.getElementById('finalScore');
 
+
 let gameState = 'start';  
 let score = 0;
 
@@ -195,6 +196,7 @@ function drawBlast(x, y) {
 function destroyBall() {
   ballDestroyed = true;
   score += 1;
+  document.getElementById("scoreDisplay").textContent = "Score: " + score;
 
   const blastX = ballX;
   const blastY = ballY;
