@@ -10,7 +10,7 @@ body {
 canvas {
   border: 3px solid black;
   width:90%;
-  height:98vh;
+  height:96vh;
   background-image: url('image/back1.png');
   background-repeat: no-repeat;
   background-size: cover;

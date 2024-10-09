@@ -131,7 +131,7 @@ function resetBall() {
 let bullets = [];
 let flames = [];
 const bulletSpeed = 4;
-const flameSpeed = 4;
+const flameSpeed = 3;
 const bulletWidth = 5;
 const bulletHeight = 10;
 const flameWidth = 20;
@@ -211,24 +211,13 @@ function clearCanvas() {
 }
 
 function detectCollision() {
-  const carCenterX = carX + carWidth / 2;
-  const carCenterY = carY + carHeight / 2;
-  
-  const distX = ballX - carCenterX;
-  const distY = ballY - carCenterY;
-  const distance = Math.sqrt(distX * distX + distY * distY);
-  
-  const carRadius = Math.sqrt((carWidth / 2) ** 2 + (carHeight / 2) ** 2); 
-  if (distance <= carRadius + ballRadius) {
-      // Normalize the distance (delta values)
-      let deltaX = distX / distance;
-      let deltaY = distY / distance;
+  const distX = Math.abs(ballX - (carX + carWidth / 2));
+  const distY = Math.abs(ballY - (carY + carHeight / 2));
 
-      // Adjust ball speed based on direction
-      const speed = 5;  
-      ballSpeedX = deltaX * speed;
-      ballSpeedY = deltaY * speed;
-      
+  if (distX < carWidth / 2 + ballRadius && distY < carHeight / 2 + ballRadius) {
+      // Car hits the ball
+      ballSpeedX = (ballX - carX) ;
+      ballSpeedY = (ballY - carY) ;
   }
 }
 
