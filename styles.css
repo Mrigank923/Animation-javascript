@@ -8,9 +8,13 @@ body {
     background-color: #f0f0f0;
 }
 canvas {
-    border: 3px solid black;
-    width:90%;
-    height:98vh;
+  border: 3px solid black;
+  width:90%;
+  height:98vh;
+  background-image: url('image/back1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; 
 }
 
 #startScreen, #gameOverScreen {
