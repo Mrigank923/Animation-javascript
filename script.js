@@ -289,10 +289,10 @@ function moveBall() {
       ballSpeedX *= 0.98; 
       ballSpeedY *= 0.98;
 
-       if (ballX - ballRadius < 0 || ballX + ballRadius > boxWidth) {
+       if (ballX - ballRadius*1.25 < 0 || ballX + ballRadius*1.25 > boxWidth) {
         ballSpeedX = -ballSpeedX;  
     }
-    if (ballY - ballRadius < 0 || ballY + ballRadius > boxHeight) {
+    if (ballY - ballRadius*1.25 < 0 || ballY + ballRadius*1.25 > boxHeight) {
         ballSpeedY = -ballSpeedY; 
     }
   }
